@@ -1,0 +1,111 @@
+<html>
+	<head>
+		<title>Wonderfully Temporary - Your IP: 145.90.81.227</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu|Ubuntu+Condensed|Ubuntu+Mono" rel="stylesheet">
+		<style>
+		body, html {
+			height: 100%;
+		}
+		body {
+			text-align: center;
+			margin: 0;
+		}
+		body:before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+			margin-right: -0.25em; /* Adjusts for spacing */
+		}
+		#ip {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 10em;
+			font-family: 'Ubuntu', sans-serif;
+			position: relative;
+			line-height: 1em;
+			padding: .25em;
+			background: #8BC34A;
+			color: white;
+			color: rgba(255,255,255, 0.87);
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+			margin: 0px 100px 0px 100px;
+		}
+		.blur {
+			color: rgba(255,255,255,1);
+			transition: 0.1s ease-in-out;
+		}
+		div:hover .blur {
+			color: rgba(255,255,255,0);
+			text-shadow: 0px 0px 5px #FFF;
+			filter: dropshadow(color=#FFFFFF, offx=0, offy=0);
+		}
+		#paper {
+			display: block;
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background: #03A9F4;
+			top: -50px;
+			left: -50px;
+			font-size: 20px;
+		}
+		.s1, .s2 {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+		.s1 {
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+			-webkit-clip-path: inset(50% 0% 0% 50%);
+		}
+		.s2 {
+			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+			-webkit-clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 50%, 100% 50%, 100% 0%);
+		}
+		.full {
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			
+			min-width: 100%;
+			min-height: 100%;
+			
+			width: auto;
+			height: auto;
+		}
+		#overlay {
+			z-index: -99;
+			background: rgba(255, 255, 255, 0.2);
+			-webkit-transition: background .1s ease-in-out;
+			-moz-transition: background .1s ease-in-out;
+			-ms-transition: background .1s ease-in-out;
+			-o-transition: background .1s ease-in-out;
+			transition: background .1s ease-in-out;
+		}
+		#ip:hover + #overlay {
+			background: rgba(255, 255, 255, 1);
+		}
+		video#vid {
+			z-index: -100;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="ip">
+						<div contenteditable>Dykam.nl</div>
+			<span id="paper">
+				Welcome
+				<span class="s1"></span>
+				<span class="s2"></span>
+			</span>
+		</div>
+		<div id="overlay" class="full"></div>
+		<video autoplay loop id="vid" class="full">
+			<source src="media/background.mp4" type="video/mp4" />
+		</video>
+	</body>
+</html>
+
